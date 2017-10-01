@@ -17,7 +17,7 @@ var elem = document.getElementById("cmd_line");
 elem.onkeyup = function(e) { // ESC
   if (e.keyCode == 13){
     var command_value = command.value.replace(/(\r\n|\n|\r)/gm,"");
-    if (command_value == "") {
+    if (command_value === "") {
       document.getElementById("cmd_line").value = "";
       document.getElementById("cmd_line").focus();
     } else {
@@ -96,6 +96,7 @@ function exit() {
   var window_close = confirm("Do you want to close this page?");
   if ( window_close === true ) {
     window.close();
+    alert("github.com does not allow window.close() function")
   }
 }
 
