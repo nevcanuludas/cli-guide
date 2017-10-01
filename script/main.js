@@ -96,7 +96,7 @@ function exit() {
   var window_close = confirm("Do you want to close this page?");
   if ( window_close === true ) {
     window.close();
-    alert("github.com does not allow window.close() function")
+    alert("github.com does not allow window.close() function");
   }
 }
 
