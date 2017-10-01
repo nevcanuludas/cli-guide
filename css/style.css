@@ -1,0 +1,98 @@
+body { 
+  background-color: #000;
+  padding: 5px;
+  font-family: "monaco", "arial";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #FFF
+}
+pre {
+  font-family: monospace; 
+  line-height: 1.35em;
+}
+
+.base {
+  height: calc(100vh - 10px);
+  width: calc(100vw - 25px);
+  position: absolute;
+  z-index: -1;
+}
+.terminal {
+  background-color: transparent;
+}
+
+#terminal_input > * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.cmd:before {content: "$ "}
+.cmd {color: lime}
+.error {color: red; display: -webkit-inline-box;}
+.warning {color: orange}
+.info {color: lightblue}
+.comment {color: gray}
+
+ul.list {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+ul.list p {
+  margin: 10px 0;
+}
+
+ul.list > li:before {
+  content: "⇨ ";
+  color: lightblue;
+  margin-left: 15px;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  width: calc(100% - 25px);
+  background-color: transparent;
+  font-family: "monaco", "arial";
+  font-size: 1em;
+  line-height: 1.2em;
+  color: #FFF;
+}
+
+textarea:hover, 
+textarea:active, 
+textarea:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+}
+
+#video_player {
+  position: fixed;
+  top: 10px;
+  right: -470px;
+  width: 450px !important;
+  max-height: 323px;
+  background-color: #000;
+  padding: 3px;
+  border-radius: 4px;
+  -webkit-transition: right 2s, background-color 2s;
+  transition: right 2s, background-color 2s;
+}
+
+#video_player.active {
+  right: 20px;
+  background-color: lightblue;
+}
+
+#video_player .close-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  float: right;
+}
+
+.v_id:before {content: "["; color: grey}
+.v_id:after {content: "]"; color: grey}
+.v_id {color: yellow}
+.v_date:before {content: "("} 
+.v_date:after {content: ")"} 

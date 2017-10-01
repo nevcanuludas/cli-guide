@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cli Guide</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="runCode(); setFocus()">
+  <div class="base" onclick="setFocus()"></div>
+  <div id="video_player">
+    <button class="close-btn" onclick="video_close()">
+      <i class="fa fa-close"></i>
+    </button>
+  </div>
+  <div class="terminal">
+    <div id="terminal_screen">
+      <p class="greeting">
+        # Welcome to Terminal View. Please type your command below:<br>
+        #<br>
+        # If you want to learn who am i, type "<span class="cmd">whoami</span>" or<br>
+        # just type "<span class="cmd">--help</span>" to see all documentation.<br>
+        <br>
+        <pre>
+          ..... ( ¯`v´¯) <span class="error">♥</span>
+          .......•.¸.•´
+          ....¸.•´
+          ...(              ╔══╗
+           ☻/               ╚╗╔╝
+          /▌ <span class="error">♥ ♥</span>            ╔╝(¯`v´¯)
+          / \ <span class="error">♥</span>             ╚══`.¸.[<span class="info">Terminal</span>]
+        </pre>
+      <br>
+      </p>
+    </div>
+    <div id="terminal_input">
+      <div class="cmd" style="display: inner-block"></div>
+      <textarea id="cmd_line" rows="1" placeholder="type your code here!">--help</textarea>
+    </div>
+  </div>
+
+  <script src="script/main.js"></script>
+  <script src="script/video.js"></script>
+</body>
+
+</html>
