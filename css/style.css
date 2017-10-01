@@ -75,13 +75,15 @@ textarea:focus {
   background-color: #000;
   padding: 3px;
   border-radius: 4px;
-  -webkit-transition: right 2s, background-color 2s;
-  transition: right 2s, background-color 2s;
+  opacity: 0;
+  -webkit-transition: right 2s, background-color 2s, opacity 2s;
+  transition: right 2s, background-color 2s, opacity 2s;
 }
 
 #video_player.active {
   right: 20px;
   background-color: lightblue;
+  opacity: 1;
 }
 
 #video_player .close-btn {
