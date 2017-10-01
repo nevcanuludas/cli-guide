@@ -115,11 +115,15 @@ function help() {
     <p class="warning"><i class="fa fa-question-circle" aria-hidden="true"></i> These are common commands used in various situations:</p>
     <br>
     <ul class="list">
-      <li>whoami <span class="comment"> ............................ [Shows who am i]</span></li>
-      <li>video list <span class="comment">or -l .................. [Lists all videos]</span></li>
-      <li>video play &lsaquo;video_name&rsaquo; <span class="comment">or -p ..... [Plays selected video]</span></li>
-      <li>clear <span class="comment"> ............................. [Clear screen]</span></li>      
-      <li>exit <span class="comment"> .............................. [Close current browser window]</span></li>
+      <!--
+      <li>whoami <span class="comment"> .......................................... [ Shows who am i ]</span></li>
+      <li>exit <span class="comment"> ............................................ [ Close current browser window ]</span></li>
+      -->
+      <li>help <span class="comment">or --help ................................... [ Lists all commands ]</span></li>
+      <li>video list <span class="comment">or -l ................................. [ Lists all categories and videos ]</span></li>
+      <li>video play &lsaquo;video_category&rsaquo; &lsaquo;video_id&rsaquo; <span class="comment">or -p ..... [ Plays selected video ]</span></li>
+      <li>video close <span class="comment">...................................... [ Closes video window ]</span></li>
+      <li>clear <span class="comment"> ............................................ [ Clear screen ]</span></li>      
     </ul>
     `;
   document.getElementById("terminal_screen").appendChild(code);
