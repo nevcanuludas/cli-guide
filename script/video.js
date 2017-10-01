@@ -7,7 +7,7 @@ function video_list() {
     </p>
     <br>
     <ul class="list">
-      <p><i class="fa fa-cube"></i> VUE Tutorials <span class="comment">use 'vue' command for select this category</span></p>
+      <p><i class="fa fa-cube"></i> VUE Tutorials <span class="comment">use '<span class="category">vue</span>' command for select this category</span></p>
       <li>
         <span class="v_id">1</span>
         <span class="v_name">THE VUE CLI AND .VUE FILES | VueJS 2 | Learning the Basics</span> 
@@ -18,7 +18,7 @@ function video_list() {
       </li>
     </ul>
     <ul class="list">
-      <p><i class="fa fa-cube"></i> Angular2 Tutorials <span class="comment">use 'angular2' command for select this category</span></p>
+      <p><i class="fa fa-cube"></i> Angular2 Tutorials <span class="comment">use '<span class="category">angular2</span>' command for select this category</span></p>
       <li>
         <span class="v_id">1</span>
         <span class="v_name">Angular 2 Tutorial - Complete Introduction - Angular 2 CLI Setup, Components, Databinding</span> 
@@ -46,7 +46,7 @@ function video_list() {
     </ul>
     <p class="info">
       <i class="fa fa-info-circle"></i>
-      Use 'video play  &lsaquo;video_category&rsaquo; &lsaquo;video_id&rsaquo;' command for watching the tutorial...
+      Use 'video play  <span class="comment">&lsaquo;<span class="category">video_category</span>&rsaquo; &lsaquo;<span class="id">video_id</span>&rsaquo;</span>' command for watching the tutorial...
     </p>
     <br>
   `;

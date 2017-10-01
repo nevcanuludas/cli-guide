@@ -31,6 +31,8 @@ pre {
 .error {color: red; display: -webkit-inline-box;}
 .warning {color: orange}
 .info {color: lightblue}
+.category {color: purple}
+.id {color: yellow}
 .comment {color: gray}
 
 ul.list {
