@@ -61,10 +61,10 @@ function runCode() {
   var command_value = command.value.replace(/(\r\n|\n|\r)/gm,"");
   var code = document.createElement("p");
   
-  if ( command_value == "exit" ) {
+  if ( command_value == "exit" || command_value == "logout" ) {
     exit();
   } 
-  else if ( command_value == "clear" ) {
+  else if ( command_value == "clear" || command_value == "clr" ) {
     clear();
   } 
   else {
@@ -74,8 +74,10 @@ function runCode() {
     
     if ( command_value == "--help" || command_value == "help" ) {
       help();
-    } else if (command_value == "whoami") {
+    } else if (command_value == "whoami" || command_value == "who am i") {
       whoami();
+    } else if (command_value == "author" || command_value == "who is your daddy") {
+      author();
     } else if (command_value == "video --help") {
       video_help();
     } else if (command_value == "video categories") {
@@ -129,14 +131,14 @@ function help() {
     <ul class="list">
       <!--
       <li>whoami <span class="comment">.......................................... [ Shows who am i ]</span></li>
-      <li>exit <span class="comment">............................................ [ Close current browser window ]</span></li>
+      <li>exit <span class="comment">or logout................................... [ Close current browser window ]</span></li>
       -->
       <li>help <span class="comment">or --help ................................... [ Lists all commands ]</span></li>
       <li>&lsaquo;cmd&rsaquo; --help <span class="comment">..................................... [ Lists all commands ]</span></li>
       <li>video list <span class="comment">or -l ................................. [ Lists all categories and videos ]</span></li>
       <li>video play &lsaquo;category_key&rsaquo; &lsaquo;video_id&rsaquo; <span class="comment">or -p ....... [ Plays selected video ]</span></li>
       <li>video close <span class="comment">...................................... [ Closes video window ]</span></li>
-      <li>clear <span class="comment">............................................ [ Clear screen ]</span></li>      
+      <li>clear <span class="comment">or clr...................................... [ Clear screen ]</span></li>      
       </ul>
       `;
       document.getElementById("terminal_screen").appendChild(code);
@@ -163,6 +165,16 @@ function help() {
 function whoami() {
   code = document.createElement("p");
   code.innerHTML = "nevcanuludas";
+  document.getElementById("terminal_screen").appendChild(code);
+}
+
+function author() {
+  code = document.createElement("p");
+  code.innerHTML = `
+    Nevcan Uludaş <span class='comment'>@nevcanuludas</span><br>
+    <a href='https://github.com/nevcanuludas' target='_blank'>GitHub</a>
+    <a href='https://twitter.com/nevcanuludas' target='_blank'>Twitter</a>
+    `;
   document.getElementById("terminal_screen").appendChild(code);
 }
 

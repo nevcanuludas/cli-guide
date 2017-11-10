@@ -11,6 +11,18 @@ pre {
   line-height: 1.35em;
 }
 
+a {
+  color: aqua;
+  border: 1px solid aqua;
+  padding: 2px 10px;
+  text-decoration: none;
+  background-color: #333;
+}
+
+a:hover {
+  background-color: #000;
+}
+
 .base {
   height: calc(100vh - 10px);
   width: calc(100vw - 25px);
