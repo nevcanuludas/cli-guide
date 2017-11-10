@@ -23,6 +23,10 @@ a:hover {
   background-color: #000;
 }
 
+.m1 {
+  margin: 10px;
+}
+
 .base {
   height: calc(100vh - 10px);
   width: calc(100vw - 25px);

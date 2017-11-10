@@ -175,12 +175,19 @@ function author() {
     • Front-end Architect <span class='comment'>@dogusteknoloji</span><br>
     • Owner & Instructor <span class='comment'>@neptunsualti</span><br>
     • Underwater Explorer <span class='comment'>@guehq</span><br>
-    <br>
-    <a href='https://github.com/nevcanuludas' target='_blank'>GitHub</a>
-    <a href='https://codepen.io/nevcanuludas/' target='_blank'>Codepen.io</a>
-    <a href='https://twitter.com/nevcanuludas' target='_blank'>Twitter</a>
-    <br>
-    <br>
+    <p class="m1">
+      <a href='https://github.com/nevcanuludas' target='_blank'>GitHub</a>
+      <a href='https://codepen.io/nevcanuludas/' target='_blank'>Codepen</a>
+      <a href='https://jsfiddle.net/user/nevcanuludas/' target='_blank'>JSFiddle</a>
+    </p>
+    <p class="m1">
+      <a href='https://medium.com/fedeveloper' target='_blank'>Medium</a>
+      <a href='https://twitter.com/nevcanuludas' target='_blank'>Twitter</a>
+      <a href='https://linkedin.com/in/nevcanuludas' target='_blank'>Linkedin</a>
+    </p>
+    <p class="m1">
+      <a href='http://nevcan.com' target='_blank'>nevcan.com</a>
+    </p>
     `;
   document.getElementById("terminal_screen").appendChild(code);
 }
