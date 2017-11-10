@@ -51,7 +51,7 @@ elem.onkeyup = function(e) { // ESC
       document.getElementById("cmd_line").value = "";
     }
   }
-}
+};
 
 /////////////////////////////////////////////////////
 //////////////////  FINDING CMD /////////////////////
