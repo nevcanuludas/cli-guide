@@ -4,10 +4,14 @@ var video = document.createElement("iframe");
 video.setAttribute("width", "100%");
 video.setAttribute("height", 300);
 video.setAttribute("frameborder", 0);
-video.setAttribute("allowfullscreen", 1);
-video.setAttribute("autoplay", 1);
 var textarea = document.querySelector('textarea');
 textarea.addEventListener('keydown', autosize);  
+
+// YouTube API script
+var tag = document.createElement('script');
+tag.src = "//www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 /////////////////////////////////////////////////////
 ///////////////  KEYBOARD EVENTS ////////////////////
@@ -72,6 +76,14 @@ function runCode() {
       help();
     } else if (command_value == "whoami") {
       whoami();
+    } else if (command_value == "video --help") {
+      video_help();
+    } else if (command_value == "video categories") {
+      video_categories();
+    } else if (command_value == "video pause") {
+      video_pause();
+    } else if (command_value == "video resume") {
+      video_resume();
     } else if (command_value == "video -l" || command_value == "video list") {
       video_list();
     } else if (command_value == "video close") {
@@ -116,16 +128,35 @@ function help() {
     <br>
     <ul class="list">
       <!--
-      <li>whoami <span class="comment"> .......................................... [ Shows who am i ]</span></li>
-      <li>exit <span class="comment"> ............................................ [ Close current browser window ]</span></li>
+      <li>whoami <span class="comment">.......................................... [ Shows who am i ]</span></li>
+      <li>exit <span class="comment">............................................ [ Close current browser window ]</span></li>
       -->
       <li>help <span class="comment">or --help ................................... [ Lists all commands ]</span></li>
+      <li>&lsaquo;cmd&rsaquo; --help <span class="comment">..................................... [ Lists all commands ]</span></li>
       <li>video list <span class="comment">or -l ................................. [ Lists all categories and videos ]</span></li>
-      <li>video play &lsaquo;video_category&rsaquo; &lsaquo;video_id&rsaquo; <span class="comment">or -p ..... [ Plays selected video ]</span></li>
+      <li>video play &lsaquo;category_key&rsaquo; &lsaquo;video_id&rsaquo; <span class="comment">or -p ....... [ Plays selected video ]</span></li>
       <li>video close <span class="comment">...................................... [ Closes video window ]</span></li>
-      <li>clear <span class="comment"> ............................................ [ Clear screen ]</span></li>      
+      <li>clear <span class="comment">............................................ [ Clear screen ]</span></li>      
+      </ul>
+      `;
+      document.getElementById("terminal_screen").appendChild(code);
+    }
+
+    function video_help() {
+      code = document.createElement("div");
+      code.innerHTML = `
+      <p class="warning"><i class="fa fa-question-circle" aria-hidden="true"></i> These are common commands used in video section:</p>
+      <br>
+      <ul class="list">
+      <li>video list <span class="comment">or -l ................................. [ Lists all categories and videos ]</span></li>
+      <li>video categories <span class="comment">................................. [ Lists all categories ]</span></li>
+      <li>video list &lsaquo;video_category&rsaquo; <span class="comment">...................... [ Lists all categories ]</span></li>
+      <li>video play &lsaquo;category_key&rsaquo; &lsaquo;video_id&rsaquo; <span class="comment">or -p ....... [ Plays selected video ]</span></li>
+      <li>video pause <span class="comment">...................................... [ Pauses video ]</span></li>
+      <li>video resume <span class="comment">..................................... [ Resumes video ]</span></li>
+      <li>video close <span class="comment">...................................... [ Closes video window ]</span></li>
     </ul>
-    `;
+  `;
   document.getElementById("terminal_screen").appendChild(code);
 }
 

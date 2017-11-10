@@ -31,7 +31,7 @@ pre {
 .error {color: red; display: -webkit-inline-box;}
 .warning {color: orange}
 .info {color: lightblue}
-.category {color: purple}
+.category {color: rgb(182, 46, 182)}
 .id {color: yellow}
 .comment {color: gray}
 
