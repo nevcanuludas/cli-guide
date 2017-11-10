@@ -131,14 +131,14 @@ function help() {
     <ul class="list">
       <!--
       <li>whoami <span class="comment">.......................................... [ Shows who am i ]</span></li>
-      <li>exit <span class="comment">or logout................................... [ Close current browser window ]</span></li>
+      <li>exit <span class="comment">or logout .................................. [ Close current browser window ]</span></li>
       -->
       <li>help <span class="comment">or --help ................................... [ Lists all commands ]</span></li>
-      <li>&lsaquo;cmd&rsaquo; --help <span class="comment">..................................... [ Lists all commands ]</span></li>
+      <li>&lsaquo;cmd&rsaquo; --help <span class="comment">..................................... [ Lists all commands of specified command ]</span></li>
       <li>video list <span class="comment">or -l ................................. [ Lists all categories and videos ]</span></li>
       <li>video play &lsaquo;category_key&rsaquo; &lsaquo;video_id&rsaquo; <span class="comment">or -p ....... [ Plays selected video ]</span></li>
       <li>video close <span class="comment">...................................... [ Closes video window ]</span></li>
-      <li>clear <span class="comment">or clr...................................... [ Clear screen ]</span></li>      
+      <li>clear <span class="comment">or clr ..................................... [ Clear screen ]</span></li>      
       </ul>
       `;
       document.getElementById("terminal_screen").appendChild(code);
@@ -172,8 +172,15 @@ function author() {
   code = document.createElement("p");
   code.innerHTML = `
     Nevcan Uludaş <span class='comment'>@nevcanuludas</span><br>
+    • Front-end Architect <span class='comment'>@dogusteknoloji</span><br>
+    • Owner & Instructor <span class='comment'>@neptunsualti</span><br>
+    • Underwater Explorer <span class='comment'>@guehq</span><br>
+    <br>
     <a href='https://github.com/nevcanuludas' target='_blank'>GitHub</a>
+    <a href='https://codepen.io/nevcanuludas/' target='_blank'>Codepen.io</a>
     <a href='https://twitter.com/nevcanuludas' target='_blank'>Twitter</a>
+    <br>
+    <br>
     `;
   document.getElementById("terminal_screen").appendChild(code);
 }
